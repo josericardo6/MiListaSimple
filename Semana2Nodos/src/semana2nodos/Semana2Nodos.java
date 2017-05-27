@@ -47,15 +47,10 @@ public class Semana2Nodos {
         
         int objetoIndexBuscar = Integer.parseInt(JOptionPane.showInputDialog("Digite el indice del dato que desea"));
         
-        if(ls.get(objetoIndexBuscar) == -1){
+        
+        System.out.println("Resultado: "+ls.get(objetoIndexBuscar));
             
-            System.out.println("ArrayIndexOutOfBounds ERROR");
-            
-        }else{
-            
-            System.out.println("El objeto en la posicion "+objetoIndexBuscar+" es: "+ ls.get(objetoIndexBuscar));
-            
-        }
+        
         
     }
     

@@ -136,42 +136,33 @@ public class ListaSimple {
     public int get(int index){
         
         int dato;
-//        TAREA
-//        ArrayIndexOutOfBounds USAR
+
+        ArrayIndexOutOfBoundsException e = null;
         
         Nodo aux = cabeza;
         int cont = 0;
-        
-        try{
             
-            if(size == 0){
-            
-                return -1;
-            
-            }else{
-                for(int i = 0; i < size; i++){
+        if(size == 0){
 
-                    if(cont == index){
-                        dato = aux.getDato();
-                        return dato;
-                    }
+            return -1;
 
-                    aux = aux.getSig();
-                    cont++;
+        }else{
+            for(int i = 0; i < size; i++){
 
-                } 
-            }
-            
-        }catch(ArrayIndexOutOfBoundsException e){
-            
-            System.out.print(e.getMessage());
-            
+                if(cont == index){
+                    dato = aux.getDato();
+                    return dato;
+                }
+
+                aux = aux.getSig();
+                cont++;
+
+            } 
         }
         
+//        System.out.println(e.getMessage());
         return -1;
         
     }
-    
-    
     
 }
